@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <meta charset="UTF-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>Hello Leaflet</title>
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
+
+ <style> 
+    #map { height: 300px; } 
+ </style>
+
+</head>
+    <style>
+    h1 {
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+
+<h1>my gainesville, fl</h1>
+
+<div id="map"></div> 
+
+<script> 
+var map = L.map('map').setView([29.688829915824932, -82.38825259504627], 10);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+var marker = L.marker([29.649052298467787, -82.32359797754002]).addTo(map);
+marker.bindPopup("my favorite restaurant!");
+
+var marker2 = L.marker([29.640363705492927, -82.26988294238963]).addTo(map);
+marker2.bindPopup("my high school!");
+
+var marker3 = L.marker([29.71419076415924, -82.4610171162563]).addTo(map);
+marker3.bindPopup("first date with my boyfriend <3");
+
+var marker4 = L.marker([29.62502745888063, -82.3789843399274]).addTo(map);
+marker4.bindPopup("my first job!");
+
+var marker5 = L.marker([29.65121821061859, -82.34288030968345]).addTo(map);
+marker5.bindPopup("the better library");
+
+</script>
+
+</body>
+
+</html>
