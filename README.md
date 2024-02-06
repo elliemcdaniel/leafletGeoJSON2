@@ -1,3 +1,2 @@
-# helloleaflet
+# helloleafletGeoJSON
 
-Following https://leafletjs.com/examples/quick-start/
